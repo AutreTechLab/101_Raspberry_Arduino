@@ -1,5 +1,5 @@
 # 101 Raspberry PI 
-## Notre configuration générale et réglage de Raspberry Pi 3 
+## Notre configuration générale 
 
 ### Hardware 
 * Raspberry Pi 3 model B -- 1GB
