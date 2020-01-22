@@ -33,7 +33,7 @@ Thymio est préprogrammé avec six comportements, dont un comportement "obéissa
 Dans ce mode, Thymio attend des commandes de la télécommande. Il est donc idéal pour tester le système expérimental.
 Pour une description complète du code, cliquez ici: [obeissantV6.aesl](./Code_RC5/obeissantV6.aesl).
 
-Codes RC5 et actions de robot correspondantes
+Codes RC5 -> action du robot correspondante
 * 2 -> aller en avant 
 * 8 -> reculer 
 * 4 -> tournez à gauche 
