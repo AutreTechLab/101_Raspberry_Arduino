@@ -56,6 +56,6 @@ Chaque action enverra une commande au robot Thymio qui exécutera la séquence d
  [Code_RC5.mp4](./Code_RC5.mp4)
 
 ***
-_Bien que nous ayons réalisé cette expérience en utilisant le protoccol RC5 et le robot Thymio comme cible, il est possible d'utiliser cette configuration pour d'autres protocoles et périphériques (NEC, LG TV, Sony, ....). _
+_Bien que nous ayons réalisé cette expérience en utilisant le protoccol RC5 et le robot Thymio comme cible, il est possible d'utiliser cette configuration pour d'autres protocoles et périphériques (NEC, LG TV, Sony, ....)._
 
 
