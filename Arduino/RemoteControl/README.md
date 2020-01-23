@@ -56,16 +56,16 @@ Le [Code_RC5.ino](./Code_RC5/Code_RC5.ino) est un programme simple qui va exécu
 9.    ThymioRC5Commands[8] = 5; -> Thymio en arrêt
 10.    ThymioRC5Commands[9] = 5;-> Thymio en arrêt
 
-Chaque action enverra une commande au robot Thymio qui exécutera la séquence de mouvements. Il y a un délai de 4s entre chaque opération (delay(4000). 
+Chaque action enverra une commande au robot Thymio qui exécutera la séquence de mouvements. Il y a un délai de 4s entre chaque opération. 
 
 Voici le boucle en C:
 
       for (int x = 0; x < 10; x++) {
          for (int i = 0; i < 3; i++) {
-             irsend.sendRC5(ThymioRC5Commands[x], 12); // Signal à envoyer
+             irsend.sendRC5(ThymioRC5Commands[x], 12); // Signal à envoyer 
              delay(50);
          } 
-      delay(4000); //Pause de 5 secondes entre les impulsions de transmission.
+      delay(4000); //Pause de 4 secondes entre les impulsions de transmission.
       }    
 
 Le résultat est visible dans la vidéo ci-dessous. 
