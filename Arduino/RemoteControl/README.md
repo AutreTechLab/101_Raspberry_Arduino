@@ -32,7 +32,7 @@ Une trame en code RC5 se compose d'une suite de 14 bits et sa construction est l
 Thymio est préprogrammé avec six comportements, dont un comportement "obéissant" (violet). 
 Dans ce mode, Thymio attend des commandes de la télécommande. Il est donc idéal pour tester le système expérimental.
 
-> Voici le code complète pour le comportement "obéissant" de Thymio pour nos lecteurs avancés qui sont familiarisés avec le langage ASEBA: [obeissantV6.aesl](./Code_RC5/obeissantV6.aesl).
+> Voici le code complète du comportement "obéissant" de Thymio pour nos lecteurs avancés qui sont familiarisés avec le langage ASEBA: [obeissantV6.aesl](./Code_RC5/obeissantV6.aesl).
 
 Pour ce test, il suffit de connaître les codes RC5 à envoyer et le comportement correspondant du robot Thymio. 
 
