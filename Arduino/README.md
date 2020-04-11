@@ -4,7 +4,7 @@ Ici tu peux trouver notre configuration ansi des exemples de .... <br>
 
 ***
 * RemoteControl
-  * Emetteur expérimental RC5 avec Arduino UNO
-  * Une télécommande pour Thymio avec Arduino UNO
+  * 01 Emetteur expérimental RC5 avec Arduino UNO
+  * 02 Une télécommande pour Thymio avec Arduino UNO
 * Pilote de servomoteur  
-  * Servomoteur à rotation Futaba S3003
+  * 03 Servomoteur à rotation Futaba S3003
