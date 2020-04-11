@@ -1,0 +1,153 @@
+<!DOCTYPE aesl-source>
+<network>
+<event name="pair_run" size="1"/>
+<event name="debug_log" size="14"/>
+<node nodeId="{69f38576-9e01-4364-908f-179d6ce4749c}" name="Thymio-II Robot"># variables for state
+var state[4] = [0,0,0,0]
+var new_state[4] = [0,0,0,0]
+
+# reset outputs
+call sound.system(-1)
+call leds.top(0,0,0)
+call leds.bottom.left(0,0,0)
+call leds.bottom.right(0,0,0)
+call leds.circle(0,0,0,0,0,0,0,0)
+
+# subroutine to display the current state
+sub display_state
+	call leds.circle(0,state[1]*32,0,state[3]*32,0,state[2]*32,0,state[0]*32)
+
+onevent rc5
+	if rc5.command == 1 then
+ 		call leds.top(32,0,0)
+		emit pair_run 0
+	end
+
+	if rc5.command == 2 then
+ 		call leds.top(0,32,0)
+		emit pair_run 1
+	end
+
+	if rc5.command == 3 then
+ 		call leds.top(0,0,32)
+		emit pair_run 2
+	end
+
+	if rc5.command == 4 then
+ 		call leds.top(32,32,0)
+		emit pair_run 3
+	end
+
+	if rc5.command == 5 then
+ 		call leds.top(0,32,32)
+		emit pair_run 4
+	end
+
+	if rc5.command == 6 then
+ 		call leds.top(15,16,0)
+		emit pair_run 5
+	end
+
+	if rc5.command == 7 then
+ 		call leds.top(32,0,32)
+		emit pair_run 6
+	end
+
+	if rc5.command == 8 then
+ 		call leds.top(32,17,32)
+		emit pair_run 7
+	end
+
+	if rc5.command == 9 then
+ 		call leds.top(0,19,0)
+		emit pair_run 8
+	end
+
+	if rc5.command == 17 then
+ 		call leds.top(0,17,32)
+		emit pair_run 9
+	end
+
+	if rc5.command == 0 then
+ 		call leds.top(32,17,0)
+		emit pair_run 10
+	end
+
+	if rc5.command == 16 then
+ 		call leds.top(32,32,32)
+		emit pair_run 11
+	end
+
+<toolsPlugins>
+<ThymioVisualProgramming>
+<vplroot xml-format-version="1">
+<program advanced_mode="1">
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="0" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="0" type="action" value0="32" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="1" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="32" type="action" value0="0" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="2" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="0" type="action" value0="0" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="3" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="32" type="action" value0="32" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="4" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="32" type="action" value0="0" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="5" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="16" type="action" value0="15" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="6" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="0" type="action" value0="32" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="7" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="17" type="action" value0="32" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="8" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="19" type="action" value0="0" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="9" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="17" type="action" value0="0" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="10" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="17" type="action" value0="32" value2="0" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="event" value0="0" value2="0" name="button" value3="0" value6="11" value5="2" value4="0"/>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+<block value1="32" type="action" value0="32" value2="32" name="colortop"/>
+</set>
+<set>
+<block value1="0" type="state" value0="0" value2="0" name="statefilter" value3="0"/>
+</set>
+</program>
+</vplroot>
+</ThymioVisualProgramming>
+</toolsPlugins>
+</node>
+</network>
