@@ -5,3 +5,5 @@ Ici tu peux trouver notre configuration ansi des exemples de .... <br>
 ***
 * RemoteControl
   * Emetteur expérimental RC5 avec Arduino UNO
+* Pilote de servomoteur  
+ * Servomoteur à rotation Futaba S3003
